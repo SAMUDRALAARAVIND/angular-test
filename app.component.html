@@ -1,0 +1,18 @@
+<h1 style="text-align: center;">App component</h1>
+<h4>{{ remoteData }}</h4>
+<form [formGroup] = "registrationForm">
+  <input type="text" formControlName="name" placeholder="Username" class="form-control"><br>
+  <input type="text" formControlName="email" placeholder="Email"  class="form-control"><br>
+  <div  formControlName="address">
+    <input type="text" class="form-control" formControlName="city" placeholder="City"><br>
+    <input type="text" placeholder="Pin code" formControlName="pincode" class="form-control">
+  </div>
+  {{ registrationForm.value | json}}
+</form>
+<nav>
+  <a routerLink = "/about" routerLinkActive = "active">About</a>
+  <a routerLink = "/home" routerLinkActive = "active">Home</a>
+  <a routerLink = "/login" routerLinkActive = "active">Login</a>
+  <a routerLink = "/signup" routerLinkActive = "active">Signup</a>
+</nav>
+<router-outlet></router-outlet>
